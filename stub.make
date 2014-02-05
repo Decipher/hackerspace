@@ -25,6 +25,6 @@ projects[commons][patch][] = https://drupal.org/files/optional_first_group-21147
 ;       structured repository for a sites/all configuration.
 
 libraries[hackerspace][download][type] = git
-libraries[hackerspace][download][url] = git@github.com:ballarat-hackerspace/hackerspace.git
+libraries[hackerspace][download][url] = https://github.com/ballarat-hackerspace/hackerspace.git
 libraries[hackerspace][destination] = ..
 libraries[hackerspace][directory_name] = all
