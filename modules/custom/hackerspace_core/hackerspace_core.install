@@ -1,0 +1,12 @@
+<?php
+/**
+ * @file
+ * Install functions for Hackerspace core module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function hackerspace_core_install() {
+  module_disable(array('acquia_agent'));
+}

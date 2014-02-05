@@ -1,0 +1,68 @@
+<?php
+/**
+ * @file
+ * Core functions for the Hackerspace core module.
+ */
+
+/**
+ * Implements hook_url_inbound_alter().
+ */
+function hackerspace_core_url_inbound_alter(&$path, $original_path, $path_language) {
+  $subdomain = hackerspace_core_get_subdomain_group();
+  if (!empty($subdomain)) {
+    switch ($path) {
+      case $GLOBALS['conf']['site_frontpage']:
+        $path = drupal_lookup_path('source', $subdomain['alias'], $path_language);
+        break;
+
+      default:
+        $group_path = drupal_lookup_path('source', "{$subdomain['alias']}/{$path}", $path_language);
+        if (!empty($group_path)) {
+          $path = $group_path;
+        }
+    }
+  }
+}
+
+/**
+ * Implements hook_url_outbund_alter().
+ */
+function hackerspace_core_url_outbound_alter(&$path, &$options, $original_path) {
+  $subdomain = hackerspace_core_get_subdomain_group();
+  if (!empty($subdomain)) {
+    if ($path == '<front>') {
+      $path = '';
+    }
+    elseif (!empty($path) && !$options['alias']) {
+      $language = isset($options['language']) && isset($options['language']->language) ? $options['language']->language : '';
+      $alias = drupal_get_path_alias($original_path, $language);
+      if ($alias != $original_path) {
+        $options['alias'] = TRUE;
+        $alias = ltrim(str_replace($subdomain['alias'], '', $alias), '/');
+        $path = $alias;
+      }
+    }
+  }
+}
+
+/**
+ * Get group from subdomain.
+ */
+function hackerspace_core_get_subdomain_group($reset = FALSE) {
+  $group =& drupal_static(__FUNCTION__, array());
+
+  if (empty($group) || $reset) {
+    $subdomain = str_replace(".{$_SERVER['SERVER_NAME']}", '', $_SERVER['HTTP_HOST']);
+    if ($subdomain != $_SERVER['SERVER_NAME']) {
+      $source = drupal_lookup_path('source', "groups/{$subdomain}");
+      if ($source) {
+        $group = array(
+          'source' => $source,
+          'alias' => "groups/{$subdomain}",
+        );
+      }
+    }
+  }
+
+  return $group;
+}
