@@ -11,3 +11,4 @@ dependencies[] = context_variable
 features[context][] = server-development
 features[ctools][] = context:context:3
 features[features_api][] = api:2
+features[features_overrides][] = page_manager_pages.groups_directory.access|plugins
