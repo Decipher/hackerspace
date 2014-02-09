@@ -27,9 +27,17 @@ function _hackerspace_core_flush_revert($modules = array()) {
 
 
 /**
- * Flush caches and revert features.
+ * Disable Commons functionality and flush caches and revert features.
  */
 function hackerspace_core_update_7100() {
+  $module_list = array(
+    'commons_polls', 'commons_q_a', 'commons_q_a_pages', 'commons_wikis',
+    'commons_wikis_pages'
+  );
+  module_disable($module_list);
+  drupal_uninstall_modules($module_list);
+
+  // Flush caches and revert features.
   _hackerspace_core_flush_revert();
 }
 
