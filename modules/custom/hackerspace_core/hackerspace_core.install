@@ -10,3 +10,26 @@
 function hackerspace_core_install() {
   module_disable(array('acquia_agent'));
 }
+
+/**
+ * Helper function; Enable dependencies, flush caches and revert features.
+ */
+function _hackerspace_core_flush_revert($modules = array()) {
+  if (!empty($modules)) {
+    foreach ($modules as $module) {
+      $info = system_get_info('module', $module);
+      module_enable($info['dependencies']);
+    }
+  }
+  drupal_flush_all_caches();
+  features_revert();
+}
+
+
+/**
+ * Flush caches and revert features.
+ */
+function hackerspace_core_update_7100() {
+  _hackerspace_core_flush_revert();
+}
+
