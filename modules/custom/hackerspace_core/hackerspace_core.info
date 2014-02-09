@@ -1,3 +1,13 @@
-name = Hackerspace core
-description = Core module for the Hackerspace project.
+name = Hackerspace(.org.au) core
+description = Core feature for Hackerspace(.org.au)
 core = 7.x
+package = " Hackerspace(.org.au)"
+version = 7.x-1.0
+project = hackerspace_core
+dependencies[] = context
+dependencies[] = context_module
+dependencies[] = context_server_vars
+dependencies[] = context_variable
+features[context][] = server-development
+features[ctools][] = context:context:3
+features[features_api][] = api:2

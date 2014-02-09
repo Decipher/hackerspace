@@ -28,3 +28,35 @@ libraries[hackerspace][download][type] = git
 libraries[hackerspace][download][url] = https://github.com/ballarat-hackerspace/hackerspace.git
 libraries[hackerspace][destination] = ..
 libraries[hackerspace][directory_name] = all
+
+
+
+; Modules
+
+projects[coffee][type] = module
+projects[coffee][subdir] = contrib
+projects[coffee][version] = 2.0
+
+projects[context][type] = module
+projects[context][subdir] = contrib
+projects[context][version] = 3.2
+
+projects[context_module][type] = module
+projects[context_module][subdir] = contrib
+projects[context_module][version] = 1.0
+
+projects[context_variable][type] = module
+projects[context_variable][subdir] = contrib
+projects[context_variable][version] = 1.1
+
+projects[context_server_vars][type] = module
+projects[context_server_vars][subdir] = contrib
+projects[context_server_vars][version] = 1.0
+
+projects[features_override][type] = module
+projects[features_override][subdir] = contrib
+projects[features_override][version] = 2.0-rc1
+
+projects[stage_file_proxy][type] = module
+projects[stage_file_proxy][subdir] = contrib
+projects[stage_file_proxy][version] = 1.4

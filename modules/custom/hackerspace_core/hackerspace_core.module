@@ -5,6 +5,22 @@
  */
 
 /**
+ * Features include.
+ */
+include_once 'hackerspace_core.features.inc';
+
+/**
+ * Include additional files.
+ */
+$dirname = dirname(__FILE__);
+$includes = file_scan_directory("{$dirname}/includes", '/.inc$/');
+foreach (module_list() as $module) {
+  if (isset($includes[$file = "{$dirname}/includes/{$module}.inc"])) {
+    require_once $file;
+  }
+}
+
+/**
  * Implements hook_url_inbound_alter().
  */
 function hackerspace_core_url_inbound_alter(&$path, $original_path, $path_language) {
@@ -65,4 +81,12 @@ function hackerspace_core_get_subdomain_group($reset = FALSE) {
   }
 
   return $group;
+}
+
+/**
+ * Is the current URL in a subdomain group?
+ */
+function hackerspace_core_is_subdomain_group() {
+  $group = hackerspace_core_get_subdomain_group();
+  return !empty($group);
 }

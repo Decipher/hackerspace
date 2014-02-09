@@ -1,4 +1,5 @@
 .DS_Store
+drush
 libraries
 modules/*
 !modules/custom
