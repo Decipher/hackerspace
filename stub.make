@@ -6,7 +6,7 @@ core = 7.x
 ; Includes
 
 includes[] = http://drupalcode.org/project/commons.git/blob_plain/7.x-3.9:/drupal-org-core.make
-includes[] = drupal-org.make
+includes[] = https://raw.githubusercontent.com/ballarat-hackerspace/hackerspace/master/drupal-org.make
 
 
 
