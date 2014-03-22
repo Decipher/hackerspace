@@ -5,7 +5,7 @@ core = 7.x
 
 ; Includes
 
-includes[] = http://drupalcode.org/project/commons.git/blob_plain/7.x-3.8:/drupal-org-core.make
+includes[] = http://drupalcode.org/project/commons.git/blob_plain/7.x-3.9:/drupal-org-core.make
 includes[] = drupal-org.make
 
 
@@ -13,10 +13,11 @@ includes[] = drupal-org.make
 ; Install profiles
 
 projects[commons][type] = profile
-projects[commons][version] = 3.8
+projects[commons][version] = 3.9
 ; Make first group optional - https://drupal.org/node/2114755#comment-7987939
-projects[commons][patch][] = https://drupal.org/files/optional_first_group-2114755-1.patch
-
+; projects[commons][patch][] = https://drupal.org/files/optional_first_group-2114755-1.patch
+; Fix Advancedqueue Error - https://drupal.org/node/2195755#comment-8519161
+projects[commons][patch][] = https://drupal.org/files/issues/2195755-advancedqueue-remove-commons.patch
 
 
 ; Custom code
