@@ -1,0 +1,31 @@
+<?php
+/**
+ * @file
+ * Code for the bHack modifications feature.
+ */
+
+// Features include.
+include_once 'bhack_modifications.features.inc';
+
+/**
+ * Implements hook_theme().
+ */
+function bhack_modifications_theme() {
+  $items['page__eform__submit__register_interest'] = array(
+    'render element' => 'page',
+    'template' => 'templates/page__eform__submit__register_interest',
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_html_head_alter().
+ */
+function bhack_modifications_html_head_alter(&$head_elements) {
+  foreach ($head_elements as &$element) {
+    if (isset($element['#attributes']['rel']) && 'shortcut icon' == $element['#attributes']['rel']) {
+      $element['#attributes']['href'] = drupal_get_path('module', 'bhack_modifications') . '/images/favicon.ico';
+    }
+  }
+}

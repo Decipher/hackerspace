@@ -14,32 +14,26 @@ function hackerspace_core_install() {
 /**
  * Helper function; Enable dependencies, flush caches and revert features.
  */
-function _hackerspace_core_flush_revert($modules = array()) {
-  if (!empty($modules)) {
-    foreach ($modules as $module) {
-      $info = system_get_info('module', $module);
-      module_enable($info['dependencies']);
+function _hackerspace_core_flush_revert($modules = array(), $reset = FALSE) {
+  if ($reset == TRUE) {
+    $info = system_get_info('module', 'hackerspace_core');
+    module_enable($info['dependencies']);
+
+    module_load_include('inc', 'features', 'features.export');
+    foreach (array_keys($info['features']) as $component) {
+      features_get_components($component, NULL, TRUE);
+      features_include_defaults($component, $reset);
+      features_get_default($component, 'hackerspace_core', TRUE, TRUE);
     }
   }
+
   drupal_flush_all_caches();
-  features_revert();
+  features_revert(array('hackerspace_core' => array()));
 }
 
-
 /**
- * Disable Commons functionality and flush caches and revert features.
+ * Enable bHack modifications module.
  */
-//function hackerspace_core_update_7101() {
-//  $module_list = array(
-//    'commons_polls',
-//    'commons_q_a',
-//    'commons_q_a_pages',
-//    'commons_wikis',
-//    'commons_wikis_pages'
-//  );
-//  module_disable($module_list);
-//  drupal_uninstall_modules($module_list);
-//
-//  // Flush caches and revert features.
-//  _hackerspace_core_flush_revert();
-//}
+function hackerspace_core_update_7101() {
+  module_enable(array('bhack_modifications'));
+}

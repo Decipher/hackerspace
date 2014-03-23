@@ -30,6 +30,14 @@ projects[context_variable][subdir] = contrib
 projects[context_variable][download][type] = git
 projects[context_variable][download][revision] = cd9b3b9b64acd5ac3a1c6c180eadff34294c3f11
 
+projects[email][type] = module
+projects[email][subdir] = contrib
+projects[email][version] = 1.2
+
+projects[entityform][type] = module
+projects[entityform][subdir] = contrib
+projects[entityform][version] = 2.0-beta2
+
 projects[features_override][type] = module
 projects[features_override][subdir] = contrib
 projects[features_override][version] = 2.0-rc1
@@ -39,3 +47,11 @@ projects[stage_file_proxy][subdir] = contrib
 projects[stage_file_proxy][version] = 1.4
 ; Add Variable module integration - https://drupal.org/node/2183195#comment-8421499
 projects[stage_file_proxy][patch][] = https://drupal.org/files/issues/add_variable_module_integration-2183195-1.patch
+
+
+
+; Themes
+
+projects[bootstrap][type] = theme
+projects[bootstrap][subdir] = contrib
+projects[bootstrap][version] = 3.0

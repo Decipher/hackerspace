@@ -1,0 +1,48 @@
+<?php
+/**
+ * @file
+ * Installation functions for the bHack modifications module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function bhack_modifications_install() {
+  variable_set('site_frontpage', 'eform/submit/register-interest');
+  variable_set('site_name', 'bHack');
+
+  theme_enable(array('bootstrap'));
+  variable_set('theme_default', 'bootstrap');
+
+  _bhack_modifications_flush_revert(TRUE);
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function bhack_modifications_uninstall() {
+  variable_set('site_frontpage', 'home');
+  variable_set('site_name', 'Hackerspace.org.au');
+
+  variable_set('theme_default', 'commons_origin');
+}
+
+/**
+ * Helper function; Enable dependencies, flush caches and revert features.
+ */
+function _bhack_modifications_flush_revert($reset = FALSE) {
+  if ($reset == TRUE) {
+    $info = system_get_info('module', 'bhack_modifications');
+    module_enable($info['dependencies']);
+
+    module_load_include('inc', 'features', 'features.export');
+    foreach (array_keys($info['features']) as $component) {
+      features_get_components($component, NULL, TRUE);
+      features_include_defaults($component, $reset);
+      features_get_default($component, 'bhack_modifications', TRUE, TRUE);
+    }
+  }
+
+  drupal_flush_all_caches();
+  features_revert(array('bhack_modifications' => array()));
+}
