@@ -42,6 +42,10 @@ projects[features_override][type] = module
 projects[features_override][subdir] = contrib
 projects[features_override][version] = 2.0-rc1
 
+projects[smtp][type] = module
+projects[smtp][subdir] = contrib
+projects[smtp][version] = 1.0
+
 projects[stage_file_proxy][type] = module
 projects[stage_file_proxy][subdir] = contrib
 projects[stage_file_proxy][version] = 1.4
