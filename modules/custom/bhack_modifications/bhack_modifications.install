@@ -25,12 +25,35 @@ function bhack_modifications_uninstall() {
   variable_set('site_name', 'Hackerspace.org.au');
 
   variable_set('theme_default', 'commons_origin');
+
+  module_disable(array('jquery_update'));
+  drupal_uninstall_modules(array('jquery_update'));
 }
 
 /**
- * Flush caches and revert features.
+ * Create 'Thank you' page and flush caches and revert features.
  */
-function bhack_modifications_update_7100() {
+function bhack_modifications_update_7101() {
+  // Create 'Thank you' page.
+  $node = new stdClass();
+  $node->type = 'page';
+  node_object_prepare($node);
+  $node->uid = 1;
+  $node->language = LANGUAGE_NONE;
+  $node->title = 'Thank you';
+  node_save($node);
+
+  $path = array(
+    'source' => "node/{$node->nid}",
+    'alias' => 'thank-you',
+  );
+  path_save($path);
+
+  // Enable the jQuery Update module.
+  module_enable(array('jquery_update'));
+  variable_set('jquery_update_jquery_version', '1.7');
+
+  //  Flush caches and revert features.
   _bhack_modifications_flush_revert(TRUE);
 }
 

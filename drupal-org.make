@@ -53,6 +53,10 @@ projects[stage_file_proxy][version] = 1.4
 projects[stage_file_proxy][patch][] = https://drupal.org/files/issues/add_variable_module_integration-2183195-1.patch
 
 
+projects[jquery_update][type] = module
+projects[jquery_update][subdir] = contrib
+projects[jquery_update][version] = 2.3
+
 
 ; Themes
 

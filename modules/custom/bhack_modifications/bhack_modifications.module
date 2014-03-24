@@ -20,6 +20,24 @@ function bhack_modifications_theme() {
 }
 
 /**
+ * Implements hook_preprocess_page().
+ */
+function bhack_modifications_preprocess_page(&$vars) {
+  if (drupal_is_front_page()) {
+    $base = drupal_get_path('module', 'bhack_modifications') . '/assets';
+    drupal_add_css($base . '/css/animate.css');
+    drupal_add_css($base . '/css/style.css');
+    drupal_add_css($base . '/css/style-responsive.css');
+    drupal_add_css($base . 'third/vegas/jquery.vegas.min.css');
+
+    drupal_add_js($base . '/js/jquery.smooth-scroll.js');
+    drupal_add_js($base . '/third/mixitup/jquery.mixitup.js');
+    drupal_add_js($base . '/third/vegas/jquery.vegas.min.js');
+    drupal_add_js($base . '/js/bhack.js');
+  }
+}
+
+/**
  * Implements hook_html_head_alter().
  */
 function bhack_modifications_html_head_alter(&$head_elements) {

@@ -82,7 +82,7 @@ function bhack_modifications_field_default_field_instances() {
     'bundle' => 'register_interest',
     'default_value' => array(
       0 => array(
-        'value' => 3000,
+        'value' => 3350,
       ),
     ),
     'deleted' => 0,

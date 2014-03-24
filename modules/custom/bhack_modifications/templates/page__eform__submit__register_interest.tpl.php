@@ -5,56 +5,123 @@
  * module.
  */
 ?>
-<header role="banner">
-  <div class="container">
-    <div class="jumbotron">
-      <?php if (!empty($site_name)): ?>
-        <h1><?php print $site_name; ?></h1>
-      <?php endif; ?>
+
+<!-- HEADER -->
+<div id="header-landing">
+  <div id="nav-menu">
+    <div class="container">
+      <div id="logo">
+        <h1><a href="index.html"><img
+              src="/sites/all/modules/custom/bhack_modifications/assets/img/bhack.png"
+              height="32"/> <?php echo $site_name ?>
+          </a></h1>
+      </div>
+      <div class="menus" id="myScrollspy">
+        <ul class="nav scroll-nav">
+          <li class="active"><a href="#top"><i
+                class="fa fa-home"></i><span>Home</span></a></li>
+          <li><a href="#about"><i
+                class="fa fa-laptop"></i><span>About</span></a></li>
+        </ul>
+      </div>
     </div>
   </div>
-</header>
+  <!-- END NAV MENU FIXED POSITION -->
 
-<div class="main-container container">
+  <!-- HEADER SECTION CONTENT -->
+  <div class="awesome-slogan">
+    <h2>HACK.<span>CODE</span>.VOID.<span>MAKE</span></h2>
+    <h4>A <span>Ballarat</span> Hackerspace</h4>
 
-  <div class="row">
+    <div class="clear"></div>
 
-    <?php if (!empty($page['sidebar_first'])): ?>
-      <aside class="col-sm-3" role="complementary">
-        <?php print render($page['sidebar_first']); ?>
-      </aside>  <!-- /#sidebar-first -->
-    <?php endif; ?>
+    <?php print render($page['content']); ?>
 
-    <section<?php print $content_column_class; ?>>
-      <?php if (!empty($page['highlighted'])): ?>
-        <div
-          class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
-      <?php endif; ?>
-      <?php if (!empty($breadcrumb)): print $breadcrumb; endif; ?>
-      <a id="main-content"></a>
-      <?php print render($title_prefix); ?>
-      <?php if (!empty($title)): ?>
-        <h1 class="page-header"><?php print $title; ?></h1>
-      <?php endif; ?>
-      <?php print render($title_suffix); ?>
-      <?php print $messages; ?>
-      <?php if (!empty($tabs)): ?>
-        <?php print render($tabs); ?>
-      <?php endif; ?>
-      <?php if (!empty($page['help'])): ?>
-        <?php print render($page['help']); ?>
-      <?php endif; ?>
-      <?php if (!empty($action_links)): ?>
-        <ul class="action-links"><?php print render($action_links); ?></ul>
-      <?php endif; ?>
-      <?php print render($page['content']); ?>
-    </section>
+    <div class="social-icons">
+      <a href="https://github.com/ballarat-hackerspace/" data-toggle="tooltip"
+         title="GitHub"><i class="fa fa-2x fa-github-alt social ico-github"></i></a>
+      <a href="https://plus.google.com/communities/106879016585907671427"
+         data-toggle="tooltip" title="Google+"><i
+          class="fa fa-2x fa-google-plus social ico-google-plus"></i></a>
+    </div>
+  </div>
+  <!-- END HEADER SECTION CONTENT -->
 
-    <?php if (!empty($page['sidebar_second'])): ?>
-      <aside class="col-sm-3" role="complementary">
-        <?php print render($page['sidebar_second']); ?>
-      </aside>  <!-- /#sidebar-second -->
-    <?php endif; ?>
+</div>
+<!-- END HEADER -->
 
+<!-- SEECTION THEME COLOR -->
+<div class="section-theme-landing"></div>
+<!-- END SECTION THEME COLOR -->
+
+<div class="section-page-landing section-light-grey" id="about">
+  <div class="inner-section">
+    <div class="container">
+
+      <!-- SECTION TITLE -->
+      <h1 class="text-center">About</h1>
+
+      <!-- WRITE SOMETHING ABOUT FEATURES HERE -->
+      <h4 class="text-center">
+        <p>bHack is modeled on an <a href="http://hackerspaces.org">
+            international
+            community of like minded spaces</a> that started in Germany in 1995.
+          It supports and encourages science, technology, engineering art and
+          math
+          culture in the Ballarat by providing a physical space for residents to
+          meet, interact and create.</p>
+
+        <p>We hold public meetups on the 1<sup>st</sup> and 3<sup>rd</sup>
+          Tuesdays of each month. These meetups are where we invite you to join
+          us
+          and chat, participate in show and tell, get help or advice, or talk
+          about your projects.</p>
+      </h4>
+      <!-- END FEATURES DESCRIPTION -->
+
+      <!-- FEATURES COLUMN -->
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="the-box-landing border-hover-bottom text-center">
+            <h4>The Hackerspace Movement</h4>
+            <iframe class="youtube" width="560" height="315"
+                    src="https://www.youtube.com/embed/WkiX7R1-kaY"
+                    frameborder="0" allowfullscreen></iframe>
+            <p>Tnvestigationes demonstraverunt lectores legere me lius quod ii
+              legunt saepius
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="the-box-landing border-hover-bottom text-center">
+            <h4>Regional Hackerspaces</h4>
+            <iframe class="youtube" width="560" height="315"
+                    src="https://www.youtube.com/embed/hoe7YX_vdgk?list=UUPWv9iwjQ3SZ196VsjP3hEg"
+                    frameborder="0" allowfullscreen></iframe>
+            <p>Investigationes demonstraverunt lectores legere me lius quod ii
+              legunt saepius
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+<!-- END SECTION FEATURES -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer">
+    <div class="container">
+      &copy; 2014 <a href="http://bhack.in">bHack</a>
+    </div>
+  </div>
+</footer>
+<!-- END FOOTER -->
+
+
+<!-- BACK TO TOP BUTTON -->
+<div id="back-top">
+  <a href="#top"><i class="fa fa-chevron-up"></i></a>
+</div>
+<!-- END BACK TO TOP -->
