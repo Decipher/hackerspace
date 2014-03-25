@@ -256,7 +256,7 @@ button.btn.btn-default.btn-teplok:hover, button.btn.btn-default.btn-teplok:focus
 
 #header-landing .awesome-slogan p {
   font-size: 18px;
-  margin: 20px 0;
+  margin: 8px 0;
   color: #fff;
   padding: 5px 10px;
   display: block;
@@ -356,6 +356,10 @@ button.btn.btn-default.btn-teplok:hover, button.btn.btn-default.btn-teplok:focus
   color: #fff;
 }
 
+.ico-google-plus {
+  color: #d34836;
+}
+
 .ico-google-plus:hover {
   color: #fff;
   background-color: #d34836;
@@ -363,6 +367,41 @@ button.btn.btn-default.btn-teplok:hover, button.btn.btn-default.btn-teplok:focus
 
 .youtube {
   width: 100%;
+}
+
+/** FORM / THANKS **/
+.entitytype-register_interest-form {
+  display: none;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 8px;
+}
+
+.form-item label {
+  color: #fff;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: left;
+  width: 100%;
+}
+
+.form-item input {
+  font-size: 16px;
+  height: 32px
+  padding: 4px 8px 0 8px;
+}
+
+.thanks {
+  display: none;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.thanks h2 {
+  font-size: 32px!important;
 }
 
 /** BOXES **/
@@ -1192,4 +1231,8 @@ footer .footer {
   -moz-box-shadow: 0px -1px 1px 0px rgba(82, 82, 82, 0.29);
   box-shadow: 0px -1px 1px 0px rgba(82, 82, 82, 0.29);
 }
+
+
+
+/** MEDIA QUERIES **/
 
