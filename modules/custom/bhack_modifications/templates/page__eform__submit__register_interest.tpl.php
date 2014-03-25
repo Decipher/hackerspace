@@ -37,6 +37,11 @@
 
     <?php print render($page['content']); ?>
 
+    <div class="thanks">
+      <h2>Thanks for your interest.</h2>
+      <p>If you haven't been to a meet yet, then come on in and say G'day. We would love to hear what projects you're working on and are always willing to help.</p>
+    </div>
+
     <div class="social-icons">
       <a href="https://github.com/ballarat-hackerspace/" data-toggle="tooltip"
          title="GitHub"><i class="fa fa-2x fa-github-alt social ico-github"></i></a>
@@ -87,9 +92,6 @@
             <iframe class="youtube" width="560" height="315"
                     src="https://www.youtube.com/embed/WkiX7R1-kaY"
                     frameborder="0" allowfullscreen></iframe>
-            <p>Tnvestigationes demonstraverunt lectores legere me lius quod ii
-              legunt saepius
-            </p>
           </div>
         </div>
         <div class="col-sm-6">
@@ -98,9 +100,6 @@
             <iframe class="youtube" width="560" height="315"
                     src="https://www.youtube.com/embed/hoe7YX_vdgk?list=UUPWv9iwjQ3SZ196VsjP3hEg"
                     frameborder="0" allowfullscreen></iframe>
-            <p>Investigationes demonstraverunt lectores legere me lius quod ii
-              legunt saepius
-            </p>
           </div>
         </div>
       </div>
