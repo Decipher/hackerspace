@@ -11,7 +11,7 @@
   <div id="nav-menu">
     <div class="container">
       <div id="logo">
-        <h1><a href="index.html"><img
+        <h1><a href="/"><img
               src="/sites/all/modules/custom/bhack_modifications/assets/img/bhack.png"
               height="32"/> <?php echo $site_name ?>
           </a></h1>

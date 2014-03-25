@@ -37,3 +37,4 @@ features[variable][] = smtp_on
 features[variable][] = smtp_port
 features[variable][] = smtp_protocol
 features[variable][] = smtp_username
+features[variable][] = theme_bootstrap_settings

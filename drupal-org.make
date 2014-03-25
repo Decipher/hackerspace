@@ -37,6 +37,8 @@ projects[email][version] = 1.2
 projects[entityform][type] = module
 projects[entityform][subdir] = contrib
 projects[entityform][version] = 2.0-beta2
+; Allow QS redirects - https://drupal.org/node/2218019#comment-8613831
+projects[entityform][patch][] = https://drupal.org/files/issues/redirect_qs-2218019-2.patch
 
 projects[features_override][type] = module
 projects[features_override][subdir] = contrib

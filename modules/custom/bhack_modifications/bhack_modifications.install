@@ -58,6 +58,13 @@ function bhack_modifications_update_7101() {
 }
 
 /**
+ * Flush caches and revert features.
+ */
+function bhack_modifications_update_7102() {
+  _bhack_modifications_flush_revert(TRUE);
+}
+
+/**
  * Helper function; Enable dependencies, flush caches and revert features.
  */
 function _bhack_modifications_flush_revert($reset = FALSE) {

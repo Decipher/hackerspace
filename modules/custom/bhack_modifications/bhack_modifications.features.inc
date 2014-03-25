@@ -43,7 +43,7 @@ function bhack_modifications_default_entityform_type() {
       "form_status" : "ENTITYFORM_OPEN",
       "roles" : { "1" : "1", "2" : 0, "3" : 0, "4" : 0 },
       "resubmit_action" : "new",
-      "redirect_path" : "thank-you",
+      "redirect_path" : "[site:url]?thanks=1",
       "instruction_pre" : { "value" : "", "format" : "filtered_html" }
     },
     "weight" : "0",

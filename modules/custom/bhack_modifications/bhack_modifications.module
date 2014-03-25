@@ -13,7 +13,7 @@ include_once 'bhack_modifications.features.inc';
 function bhack_modifications_theme() {
   $items['page__eform__submit__register_interest'] = array(
     'render element' => 'page',
-    'template' => 'templates/page__eform__submit__register_interest',
+    'template'       => 'templates/page__eform__submit__register_interest',
   );
 
   return $items;
@@ -25,16 +25,21 @@ function bhack_modifications_theme() {
 function bhack_modifications_preprocess_page(&$vars) {
   if (drupal_is_front_page()) {
     $base = drupal_get_path('module', 'bhack_modifications') . '/assets';
-    drupal_add_css('https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css', array('type' => 'external'));
+    drupal_add_css('//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css', array('type' => 'external'));
+    drupal_add_css('//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css', array('type' => 'external'));
     drupal_add_css($base . '/css/animate.css');
     drupal_add_css($base . '/css/style.css');
     drupal_add_css($base . '/css/style-responsive.css');
     drupal_add_css($base . '/third/vegas/jquery.vegas.min.css');
 
-    drupal_add_js($base . '/js/jquery.smooth-scroll.js');
-    drupal_add_js($base . '/third/mixitup/jquery.mixitup.js');
-    drupal_add_js($base . '/third/vegas/jquery.vegas.min.js');
-    drupal_add_js($base . '/js/bhack.js');
+    drupal_add_js('//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js', array(
+      'scope' => 'footer',
+      'type'  => 'external',
+    ));
+    drupal_add_js($base . '/js/jquery.smooth-scroll.js', array('scope' => 'footer'));
+    drupal_add_js($base . '/third/mixitup/jquery.mixitup.js', array('scope' => 'footer'));
+    drupal_add_js($base . '/third/vegas/jquery.vegas.min.js', array('scope' => 'footer'));
+    drupal_add_js($base . '/js/bhack.js', array('scope' => 'footer'));
   }
 }
 
