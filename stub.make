@@ -5,19 +5,14 @@ core = 7.x
 
 ; Includes
 
-includes[] = http://drupalcode.org/project/commons.git/blob_plain/7.x-3.9:/drupal-org-core.make
 includes[] = https://raw.githubusercontent.com/ballarat-hackerspace/hackerspace/master/drupal-org.make
 
 
 
 ; Install profiles
 
-projects[commons][type] = profile
-projects[commons][version] = 3.9
-; Make first group optional - https://drupal.org/node/2114755#comment-7987939
-; projects[commons][patch][] = https://drupal.org/files/optional_first_group-2114755-1.patch
-; Fix Advancedqueue Error - https://drupal.org/node/2195755#comment-8519161
-projects[commons][patch][] = https://drupal.org/files/issues/2195755-advancedqueue-remove-commons.patch
+projects[commons][type] = core
+projects[commons][version] = 7.x-3.9
 
 
 ; Custom code
