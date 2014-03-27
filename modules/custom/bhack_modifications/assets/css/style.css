@@ -97,7 +97,13 @@ a:hover {
   border-color: #0099cc;
 }
 
-/** STYLING **/.wrapper {
+p {
+  font-size: 18px;
+  text-align: justify;
+}
+
+/** STYLING **/
+.wrapper {
   position: relative;
 }
 
@@ -140,7 +146,7 @@ button.btn.btn-default.btn-teplok:hover, button.btn.btn-default.btn-teplok:focus
   position: absolute;
   top: 0;
   left: 0;
-  padding: 10px 0;
+  padding: 16px;
 }
 
 #header-landing #logo h1 {
@@ -272,7 +278,8 @@ button.btn.btn-default.btn-teplok:hover, button.btn.btn-default.btn-teplok:focus
   margin: 2px;
 }
 
-/** SECTION **/.section-theme-landing {
+/** SECTION **/
+.section-theme-landing {
   height: 10px;
   background: #0099cc;
 }
@@ -313,7 +320,11 @@ button.btn.btn-default.btn-teplok:hover, button.btn.btn-default.btn-teplok:focus
 }
 
 .section-page-landing .inner-section {
-  padding: 100px 0;
+  padding: 64px 0;
+}
+
+.section-page-landing .inner-section h1 {
+  font-variant: small-caps;
 }
 
 .section-page-landing#quote {
