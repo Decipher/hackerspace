@@ -58,6 +58,8 @@ function bhack_modifications_html_head_alter(&$head_elements) {
  * Implements hook_form_FORM_ID_alter().
  */
 function bhack_modifications_form_register_interest_entityform_edit_form_alter(&$form, &$form_state) {
+$form['actions']['submit']['#attributes']['class'][] = 'btn-primary';
+
   $language = field_language('entityform', $form['#entity'], 'field_ri_referer');
   $form['field_ri_referer'][$language][0]['value']['#type'] = 'value';
   foreach (array_keys($_GET) as $key) {

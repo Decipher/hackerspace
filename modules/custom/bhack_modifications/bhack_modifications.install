@@ -60,7 +60,7 @@ function bhack_modifications_update_7101() {
 /**
  * Flush caches and revert features.
  */
-function bhack_modifications_update_7103() {
+function bhack_modifications_update_7104() {
   _bhack_modifications_flush_revert(TRUE);
 }
 

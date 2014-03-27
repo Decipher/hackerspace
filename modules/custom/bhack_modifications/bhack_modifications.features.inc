@@ -28,7 +28,7 @@ function bhack_modifications_default_entityform_type() {
       "draftable" : 0,
       "draft_button_text" : "",
       "draft_save_text" : { "value" : "", "format" : "filtered_html" },
-      "submit_button_text" : "",
+      "submit_button_text" : "Register interest",
       "submit_confirm_msg" : "",
       "your_submissions" : "",
       "disallow_resubmit_msg" : "",
