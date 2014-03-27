@@ -39,7 +39,7 @@ function bhack_modifications_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'email_textfield',
-      'weight' => 2,
+      'weight' => 1,
     ),
   );
 
@@ -73,7 +73,7 @@ function bhack_modifications_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 1,
+      'weight' => 0,
     ),
   );
 
@@ -117,6 +117,44 @@ function bhack_modifications_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'entityform-register_interest-field_ri_referer'
+  $field_instances['entityform-register_interest-field_ri_referer'] = array(
+    'bundle' => 'register_interest',
+    'default_value' => array(
+      0 => array(
+        'value' => 'direct',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'entityform',
+    'field_name' => 'field_ri_referer',
+    'label' => 'Referer',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
       'weight' => 3,
     ),
   );
@@ -126,6 +164,7 @@ function bhack_modifications_field_default_field_instances() {
   t('Email');
   t('Name');
   t('Postcode');
+  t('Referer');
 
   return $field_instances;
 }

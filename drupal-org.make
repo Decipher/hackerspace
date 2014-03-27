@@ -30,6 +30,10 @@ projects[context_variable][subdir] = contrib
 projects[context_variable][download][type] = git
 projects[context_variable][download][revision] = cd9b3b9b64acd5ac3a1c6c180eadff34294c3f11
 
+projects[dindent][type] = module
+projects[dindent][subdir] = contrib
+projects[dindent][version] = 1.0
+
 projects[email][type] = module
 projects[email][subdir] = contrib
 projects[email][version] = 1.2
@@ -43,6 +47,10 @@ projects[entityform][patch][] = https://drupal.org/files/issues/redirect_qs-2218
 projects[features_override][type] = module
 projects[features_override][subdir] = contrib
 projects[features_override][version] = 2.0-rc1
+
+projects[google_analytics][type] = module
+projects[google_analytics][subdir] = contrib
+projects[google_analytics][version] = 1.4
 
 projects[smtp][type] = module
 projects[smtp][subdir] = contrib
@@ -65,3 +73,10 @@ projects[jquery_update][version] = 2.3
 projects[bootstrap][type] = theme
 projects[bootstrap][subdir] = contrib
 projects[bootstrap][version] = 3.0
+
+
+
+; Libraries
+
+libraries[dindent][download][type] = get
+libraries[dindent][download][url] = https://raw.githubusercontent.com/gajus/dindent/master/src/Parser.php

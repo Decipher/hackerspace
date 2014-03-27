@@ -24,13 +24,14 @@ function bhack_modifications_default_rules_configuration() {
           }
         },
         { "entity_has_field" : { "entity" : [ "entityform" ], "field" : "field_ri_email" } },
-        { "entity_has_field" : { "entity" : [ "entityform" ], "field" : "field_ri_name" } }
+        { "entity_has_field" : { "entity" : [ "entityform" ], "field" : "field_ri_name" } },
+        { "entity_has_field" : { "entity" : [ "entityform" ], "field" : "field_ri_referer" } }
       ],
       "DO" : [
         { "mail" : {
             "to" : "admin@bhack.in",
             "subject" : "New \\u0027Register interest\\u0027 submission",
-            "message" : "A new \\u0027Register interest\\u0027 submissions has been made:\\r\\n\\r\\nName: [entityform:field-ri-name]\\r\\nEmail: [entityform:field-ri-email]\\r\\nPostcode: [entityform:field-ri-postcode]",
+            "message" : "A new \\u0027Register interest\\u0027 submissions has been made:\\r\\n\\r\\nName: [entityform:field-ri-name]\\r\\nEmail: [entityform:field-ri-email]\\r\\nPostcode: [entityform:field-ri-postcode]\\r\\nReferer: [entityform:field-ri-referer]",
             "from" : "admin@bhack.in",
             "language" : [ "entityform:type" ]
           }
