@@ -19,10 +19,10 @@
       </div>
       <div class="menus" id="myScrollspy">
         <ul class="nav scroll-nav">
-          <li class="active"><a href="#top"><i
-                class="fa fa-home"></i><span>Home</span></a></li>
-          <li><a href="#about"><i
-                class="fa fa-laptop"></i><span>About</span></a></li>
+          <li><a href="#top"><i class="fa fa-home"></i><span>Home</span></a></li>
+          <li><a href="#about"><i class="fa fa-lightbulb-o"></i><span>About</span></a></li>
+          <li><a href="#what"><i class="fa fa-question"></i><span>What</span></a></li>
+          <li><a href="#where"><i class="fa fa-map-marker"></i><span>Where</span></a></li>
         </ul>
       </div>
     </div>
