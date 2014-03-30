@@ -5,7 +5,7 @@ core = 7.x
 
 ; Includes
 
-includes[] = https://raw.githubusercontent.com/ballarat-hackerspace/hackerspace/master/drupal-org.make
+includes[] = https://raw.githubusercontent.com/ballarat-hackerspace/hackerspace/bHack/drupal-org.make
 
 
 
@@ -25,3 +25,4 @@ libraries[hackerspace][download][type] = git
 libraries[hackerspace][download][url] = https://github.com/ballarat-hackerspace/hackerspace.git
 libraries[hackerspace][destination] = ..
 libraries[hackerspace][directory_name] = all
+libraries[hackerspace][branch] = bHack
