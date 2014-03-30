@@ -79,4 +79,4 @@ projects[bootstrap][version] = 3.0
 ; Libraries
 
 libraries[dindent][download][type] = get
-libraries[dindent][download][url] = https://raw.githubusercontent.com/gajus/dindent/master/src/Parser.php
+libraries[dindent][download][url] = https://raw.githubusercontent.com/Decipher/dindent/master/src/Parser.php
