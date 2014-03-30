@@ -23,6 +23,6 @@ projects[commons][version] = 7.x-3.9
 
 libraries[hackerspace][download][type] = git
 libraries[hackerspace][download][url] = https://github.com/ballarat-hackerspace/hackerspace.git
+libraries[hackerspace][download][branch] = bHack
 libraries[hackerspace][destination] = ..
 libraries[hackerspace][directory_name] = all
-libraries[hackerspace][branch] = bHack
