@@ -23,6 +23,7 @@
           <li><a href="#about"><i class="fa fa-lightbulb-o"></i><span>About</span></a></li>
           <li><a href="#what"><i class="fa fa-question"></i><span>What</span></a></li>
           <li><a href="#where"><i class="fa fa-map-marker"></i><span>Where</span></a></li>
+          <li><a href="http://pages.bhack.in/blog/"><i class="fa fa-bullhorn"></i><span>Blog</span></a></li>
         </ul>
       </div>
     </div>
@@ -65,7 +66,7 @@
         <div class="col-sm-12">
           <h1 class="text-center">About</h1>
 
-          <p>bHack is modeled on an <a href="http://hackerspaces.org"> international community of like minded spaces</a> that started in Germany in 1995. It supports and encourages science, technology, engineering art and math culture in the Ballarat by providing a physical space for residents to meet, interact and create.</p>
+          <p>bHack is modeled on an <a href="http://hackerspaces.org"> international community of like minded spaces</a> that started in Germany in 1995. It supports and encourages science, technology, engineering, art and math culture in the Ballarat region by providing a physical space for residents to meet, interact and create.</p>
 
           <p>We hold public meetups on the 1<sup>st</sup> and 3<sup>rd</sup> Tuesdays of each month. These meetups are where we invite you to join us and chat, participate in show and tell, get help or advice, or talk about your projects.</p>
         </div>
