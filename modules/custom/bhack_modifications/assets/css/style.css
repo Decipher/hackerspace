@@ -462,12 +462,14 @@ button.btn.btn-default.btn-teplok:hover, button.btn.btn-default.btn-teplok:focus
 }
 
 .the-box-landing h3 {
+  color: #000;
   font-weight: 300;
   margin: 0;
   padding: 0;
 }
 
 .the-box-landing h4 {
+  color: #000;
   font-weight: 300;
 }
 
